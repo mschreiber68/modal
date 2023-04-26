@@ -1,0 +1,39 @@
+{
+  "name": "@mschreiber68/modal-dialog",
+  "version": "0.0.1",
+  "description": "A decorator web component that adds quality of life improvements to the Dialog element modal functionality.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "types": "./dist/esm/types/index.d.ts"
+    }
+  },
+  "files": [
+    "./dist/**/*"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc && npm run bundle",
+    "clean": "rm -rf ./dist",
+    "bundle": "esbuild dist/esm/index.js --bundle --minify --target=es2017 --tree-shaking=false --outfile=dist/cdn/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mschreiber68/modal-dialog.git"
+  },
+  "keywords": [
+    "component",
+    "modal",
+    "dialog"
+  ],
+  "author": "Mike Schreiber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mschreiber68/modal-dialog/issues"
+  },
+  "homepage": "https://github.com/mschreiber68/modal-dialog#readme",
+  "devDependencies": {
+    "esbuild": "^0.17.18",
+    "typescript": "^5.0.4"
+  }
+}
