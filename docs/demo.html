@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>modal-dialog Demo</title>
+</head>
+<body>
+<modal-dialog>
+    <dialog>
+        <h1>Modal</h1>
+    </dialog>
+</modal-dialog>
+
+<button>Open modal</button>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('button').addEventListener('click', () => {
+            document.querySelector('dialog').showModal();
+        })
+    })
+</script>
+
+<script src="https://unpkg.com/@mschreiber68/modal-dialog@latest/dist/cdn/index.js"></script>
+</body>
+</html>

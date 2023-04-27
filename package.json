@@ -1,6 +1,6 @@
 {
   "name": "@mschreiber68/modal-dialog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A decorator web component that adds quality of life improvements to the Dialog element modal functionality.",
   "type": "module",
   "exports": {
@@ -15,7 +15,10 @@
   "scripts": {
     "build": "npm run clean && tsc && npm run bundle",
     "clean": "rm -rf ./dist",
-    "bundle": "esbuild dist/esm/index.js --bundle --minify --target=es2017 --tree-shaking=false --outfile=dist/cdn/index.js"
+    "bundle": "esbuild dist/esm/index.js --bundle --minify --target=es2017 --tree-shaking=false --outfile=dist/cdn/index.js",
+    "lint": "eslint --fix .",
+    "format": "prettier --write .",
+    "check": "npm run lint && npm run format"
   },
   "repository": {
     "type": "git",
@@ -33,7 +36,11 @@
   },
   "homepage": "https://github.com/mschreiber68/modal-dialog#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
     "esbuild": "^0.17.18",
+    "eslint": "^8.39.0",
+    "prettier": "2.8.8",
     "typescript": "^5.0.4"
   }
 }

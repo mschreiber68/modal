@@ -1,18 +1,18 @@
 export default class ModalDialog extends HTMLElement {
   public constructor() {
     super();
-    this.style.display = 'contents';
+    this.style.display = "contents";
   }
 
   public connectedCallback(): void {
-    this.addEventListener('click', this.onClick);
+    this.addEventListener("click", this.onClick);
   }
 
   /**
    * If a child dialog backdrop was clicked, close dialog.
    */
   private onClick = (event: MouseEvent) => {
-    const dialog = document.querySelector('dialog');
+    const dialog = document.querySelector("dialog");
     if (!dialog || !dialog.open) {
       return;
     }
@@ -30,6 +30,9 @@ export default class ModalDialog extends HTMLElement {
   };
 }
 
-if (typeof window !== 'undefined' && !window.customElements.get('modal-dialog')) {
-  window.customElements.define('modal-dialog', ModalDialog);
+if (
+  typeof window !== "undefined" &&
+  !window.customElements.get("modal-dialog")
+) {
+  window.customElements.define("modal-dialog", ModalDialog);
 }
