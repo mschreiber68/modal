@@ -1,6 +1,6 @@
 {
   "name": "@mschreiber68/modal-dialog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A decorator web component that adds quality of life improvements to the Dialog element modal functionality.",
   "type": "module",
   "exports": {
